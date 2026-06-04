@@ -840,12 +840,21 @@
     }
 
     .portfolio-img {
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid var(--border);
-        transition: border-color 0.3s;
-    }
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s;
+  aspect-ratio: 16/10;
+}
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+}
+
     .portfolio-img:hover { border-color: var(--border-bright); }
     .portfolio-img img { display: block; width: 100%; transition: transform 0.5s; }
     .portfolio-item:hover .portfolio-img img { transform: scale(1.06); }
@@ -1345,7 +1354,7 @@
                     <div class="service-card">
                         <div class="service-icon"><i class="fa fa-code"></i></div>
                         <h4>Web Application Development</h4>
-                        <div class="service-price">Starting from <span>$799</span></div>
+                        <div class="service-price">#<span>#</span></div>
                         <p>Create custom Web Applications tailored to your business needs, combining clean design, robust functionality and seamless user experience.</p>
                     </div>
                 </div>
@@ -1353,7 +1362,7 @@
                     <div class="service-card">
                         <div class="service-icon"><i class="fa fa-code-branch"></i></div>
                         <h4>Graphic Design</h4>
-                        <div class="service-price">Starting from <span>$20</span></div>
+                        <div class="service-price">#<span>#</span></div>
                         <p>Craft visually striking graphics and branding materials that communicate your message effectively and leave a lasting impression.</p>
                     </div>
                 </div>
@@ -1361,7 +1370,7 @@
                     <div class="service-card">
                         <div class="service-icon"><i class="fa fa-camera"></i></div>
                         <h4>Live Streaming</h4>
-                        <div class="service-price">Starting from <span>$199</span></div>
+                        <div class="service-price">#<span>#</span></div>
                         <p>High-quality live streaming services for events, webinars and online broadcasts, ensuring smooth delivery and an engaging viewer experience.</p>
                     </div>
                 </div>
@@ -1369,7 +1378,7 @@
                     <div class="service-card">
                         <div class="service-icon"><i class="fa fa-laptop-code"></i></div>
                         <h4>UI / UX Design</h4>
-                        <div class="service-price">Starting from <span>$199</span></div>
+                        <div class="service-price">#<span>#</span></div>
                         <p>Design intuitive and engaging user interfaces that enhance user experience, improve usability and create visually appealing digital products.</p>
                     </div>
                 </div>
@@ -1392,12 +1401,12 @@
                     <li class="mx-2" data-filter=".third">Analytics</li>
                 </ul>
             </div>
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-4 col-md-6 portfolio-item first">
                     <div class="portfolio-img">
-                        <img class="img-fluid" src="ui_ux/gtec-auditorium2.png" alt="">
+                        <img class="img-fluid" src="ui_ux/gtec conference facility landing page.png" alt="">
                         <div class="portfolio-btn">
-                            <a href="ui_ux/gtec-auditorium2.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a href="ui_ux/gtec conference facility landing page.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                             <a href="https://gtec-auditorium.web.app/"><i class="fa fa-link"></i></a>
                         </div>
                     </div>
@@ -1485,9 +1494,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item first">
                     <div class="portfolio-img">
-                        <img class="img-fluid" src="img/gtec-guesthousebookingpage.jpg" alt="">
+                        <img class="img-fluid" src="ui_ux/gtec guest lodge landing page.png" alt="">
                         <div class="portfolio-btn">
-                            <a href="img/gtec-guesthousebookingpage.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a href="ui_ux/gtec guest lodge landing page.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                             <a href="index.html"><i class="fa fa-link"></i></a>
                         </div>
                     </div>

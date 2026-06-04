@@ -99,17 +99,24 @@
     }, {offset: '80%'});
 
 
-    // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
+    // Portfolio filter (CSS grid, no Isotope)
+$('#portfolio-flters li').on('click', function () {
+    $('#portfolio-flters li').removeClass('active');
+    $(this).addClass('active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+    var filter = $(this).data('filter');
+    $('.portfolio-item').each(function () {
+        if (filter === '*') {
+            $(this).fadeIn(300);
+        } else {
+            if ($(this).hasClass(filter.replace('.', ''))) {
+                $(this).fadeIn(300);
+            } else {
+                $(this).fadeOut(300);
+            }
+        }
     });
+});
 
 
     // Testimonials carousel
